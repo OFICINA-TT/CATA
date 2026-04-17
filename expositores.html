@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #706b70 0%, #e0e8f0 100%);
+            background: linear-gradient(135deg, #a99ba9 0%, #5b5c5c 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -21,37 +21,41 @@
         .container {
             width: 100%;
             max-width: 400px;
-            background-color: #ffffff;
+            background-color: #54356f;
             padding: 40px 20px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(231, 224, 224, 0.1);
             text-align: center;
             margin: 20px;
         }
 
-        /* Estilo restaurado: Círculo con el emoji */
-        .profile-img {
-            width: 90px;
-            height: 90px;
-            background-color: #8b5ba8;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 15px auto;
-            color: white;
-            font-size: 32px;
-            box-shadow: 0 5px 15px rgba(139, 91, 168, 0.3);
+        /* --- NUEVO ESTILO PARA EL LOGO DEL ENCABEZADO --- */
+        /* Eliminamos el estilo del círculo y creamos este nuevo */
+        .header-logo-container {
+            width: 100%;
+            max-width: 250px; /* Ancho máximo para que no ocupe todo */
+            margin: 0 auto 25px auto; /* Centrado y separado del título */
+            text-align: center;
         }
+
+        .header-logo-img {
+            max-width: 100%;
+            height: auto; /* Mantiene la proporción */
+            display: block;
+            margin: 0 auto;
+            /* Opcional: una sombra muy sutil para dar relieve */
+            filter: drop-shadow(0px 2px 4px rgba(159, 147, 167, 0.15));
+        }
+        /* ----------------------------------------------- */
         
         h1 {
-            color: #333;
+            color: #fffefe;
             font-size: 22px;
             margin: 0 0 5px 0;
         }
 
         p.subtitle {
-            color: #666;
+            color: #f4e7e7;
             font-size: 14px;
             margin: 0 0 30px 0;
             font-weight: 300;
@@ -70,7 +74,7 @@
             border-radius: 12px;
             font-weight: 600;
             font-size: 15px;
-            border: 2px solid #eef2f5;
+            border: 2px solid #a3bdd0;
             transition: all 0.3s ease;
         }
 
@@ -103,25 +107,28 @@
 
     <div class="container">
         
-        <div class="profile-img">
-            🔭
-        </div>
-        
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 0 auto 25px auto; padding: 0 10px; box-sizing: border-box;">
+    <img src="https://oficina-tt.github.io/CATA/Logo_CATA_ANID_BLANCO.png" alt="Logo CATA" style="max-width: 100%; height: auto; object-fit: contain; display: block;">
+</div>
         <h1>Perfiles de Expositores</h1>
-        <p class="subtitle">Programa de Capacitaciones CATA I+D</p>
+        <p class="subtitle">Programa de Capacitaciones I+D</p>
 
+        <a href="https://www.linkedin.com/in/katherinesantospavez" target="_blank" class="link-btn">
+            <span class="linkedin-icon">in</span> Katherine Santos 
+        </a>
+        
         <a href="https://www.linkedin.com/in/andrea-catalan-14819b5" target="_blank" class="link-btn">
             <span class="linkedin-icon">in</span> Andrea Catalán
         </a>
 
-        <a href="https://www.linkedin.com/in/katherinesantospavez" target="_blank" class="link-btn">
-            <span class="linkedin-icon">in</span> Katherine Santos Pavez
-        </a>
-
         <a href="https://www.linkedin.com/in/pratletelier" target="_blank" class="link-btn">
-            <span class="linkedin-icon">in</span> Santiago Prat Letelier
+            <span class="linkedin-icon">in</span> Santiago Prat 
         </a>
-
+        
+        <a href="https://www.linkedin.com/in/francisco-abarca-mackay-28a59337?originalSubdomain=cl" target="_blank" class="link-btn">
+            <span class="linkedin-icon">in</span> Francisco Mackay
+        </a>
+        
         <div class="footer">
             CATA - 2026
         </div>
