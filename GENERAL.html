@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjetas Jornada Roadmap CATA</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    @media print {
+        body {
+            background-color: white;
+            padding: 0;
+        }
+        .no-print {
+            display: none;
+        }
+        .card {
+            box-shadow: none !important;
+            border: 1px dashed #ccc !important;
+        }
+    }
+
+    .card {
+        width: 85.6mm; 
+        height: 53.98mm;
+        background-color: #ffffff;
+        border: 2px solid #002B5B;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        page-break-inside: avoid;
+    }
+
+    .logo {
+        max-width: 100%;
+        max-height: 35px; 
+        object-fit: contain; 
+        margin-top: 2px;
+    }
+
+    .message {
+        font-size: 15px;
+        font-weight: bold;
+        color: #002B5B;
+        margin: 5px 0 0 0;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 12px;
+        color: #444444;
+        margin: 5px 0;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer {
+        font-size: 9px; 
+        font-weight: bold;
+        color: #666666;
+        text-transform: uppercase;
+        border-top: 1px solid #eee;
+        width: 100%;
+        padding-top: 5px;
+    }
+
+    .btn-imprimir {
+        background-color: #002B5B;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .btn-imprimir:hover {
+        background-color: #001a36;
+    }
+</style>
+</head>
+<body>
+
+<div class="no-print" style="width: 100%; text-align: center; margin-bottom: 30px;">
+    <h2>Generador de Tarjetas CATA</h2>
+    <p>Haz clic en el botón para imprimir. Se ajustarán automáticamente al tamaño de hoja A4.</p>
+    <button class="btn-imprimir" onclick="window.print()">🖨️ Imprimir Tarjetas</button>
+</div>
+
+<script>
+    // LISTA DE TEMÁTICAS: Aquí puedes agregar las 5 más que te faltan siguiendo el mismo formato.
+    const tematicas = [
+        {
+            titulo: "Seguridad en faenas.",
+            texto: "¿Cómo monitorear condiciones de riesgo (gases, estabilidad, presencia humana) en zonas peligrosas?"
+        },
+        {
+            titulo: "Monitoreo no invasivo de infraestructura.",
+            texto: "¿Cómo detectar desgaste o fallas en rieles y túneles sin interrumpir la operación? Pista: sensores remotos, ondas milimétricas, análisis de vibraciones."
+        },
+        {
+            titulo: "Gestión de flujo de pasajeros en tiempo real.",
+            texto: "¿Cómo anticipar y reducir la congestión en estaciones críticas? Pista: datos, modelos predictivos, sensórica."
+        },
+        {
+            titulo: "Detección temprana de incidentes en estaciones",
+            texto: "¿Cómo identificar situaciones anómalas (caídas, aglomeraciones peligrosas) de forma automática?"
+        },
+        {
+            titulo: "Detección temprana de enfermedades en cultivos.",
+            texto: "¿Cómo identificar estrés o enfermedades antes de que sean visibles?"
+        },
+        // Cuando tengas las otras 5, agrégalas aquí abajo siguiendo el ejemplo:
+        // { titulo: "Título de la nueva", texto: "Descripción de la nueva" },
+    ];
+
+    // Esta función dibuja las tarjetas automáticamente en la pantalla
+    tematicas.forEach(item => {
+        document.write(`
+            <div class="card">
+                <img src="https://oficina-tt.github.io/CATA/logo_cata.png" alt="Logo CATA" class="logo">
+                <div class="message">${item.titulo}</div>
+                <div class="description">${item.texto}</div>
+                <div class="footer">3° Jornada Roadmap Tecnológico</div>
+            </div>
+        `);
+    });
+</script>
+
+</body>
+</html>
